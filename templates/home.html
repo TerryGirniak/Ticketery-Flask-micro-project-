@@ -5,9 +5,10 @@
           <div class="media-body">
               <h3 class="mr-2" href="#">{{ ticket.event }}</h3>
 
-            <h2><a class="article-title" href="#">{{ ticket.category }}</a></h2>
-            <p class="article-content">{{ ticket.price }}  UAH</p>
-              <small class="text-muted">{{ ticket.date }}</small>
+            <p style="color: #80CBC4">{{ ticket.price }}  UAH</p>
+              <small>{{ ticket.date }}</small>
+
+              <h3 align="right"><a style="color: #50c878" href="/account">Buy</a></h3>
           </div>
         </article>
     {% endfor %}
