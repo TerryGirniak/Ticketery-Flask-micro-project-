@@ -1,10 +1,17 @@
-{% extends 'layout.html' %}
+{% extends "layout.html" %}
+{% block content %}
+    {% for ticket in tickets %}
+        <article class="media content-section">
+          <div class="media-body">
+              <h3 class="mr-2" href="#">{{ ticket.event }}</h3>
 
-{% block body %}
-    <div class="container">
-  <div class="jumbotron text-center">
-    <h1>Ticketery.inc</h1>
-    <p>Buy tickets for any event safely</p>
-  </div>
-</div>
-{% endblock %}
+            <h2><a class="article-title" href="#">{{ ticket.category }}</a></h2>
+            <p class="article-content">{{ ticket.price }}  UAH</p>
+              <small class="text-muted">{{ ticket.date }}</small>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
+
+<link rel="stylesheet" href="/static/main.css/reset.css?q=1280549780"
+   type="text/css" media="screen" charset="utf-8" />
